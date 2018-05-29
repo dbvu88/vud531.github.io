@@ -6,34 +6,66 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <h3>Click on the passage title to expand the passage</h3>
 
-  <div id="passageList"></div>
+  <div id="passage-list">
 
- <script>
+  </div>
 
-  var data = ['passage 1', 'passage 2', 'passge 3'];
+ <script type="text/javascript">
+
+  var data = ['passage 1', 'passage 2', 'passsge 3'];
 
   function generateTitlesList(dataArray) {
   // create the list element
-  var list = document.createElement('ul');
+    var list = document.createElement('ul');
 
-  for(var i = 0; i < dataArray.length; i++ ) {
-    // create list item
-    var item = document.createElement('li');
+    for (var i = 0; i < dataArray.length; i++ ) {
+      // create list item
+      var item = document.createElement('li');
 
-    // set list content
-    item.appendChild(document.createTextNode(dataArray[i]));
+      // set list content
+      item.appendChild(document.createTextNode(dataArray[i]));
 
-    // appent item to list
-    list.appendChild(item);
+      let itemId = `passage${i}`
+
+      item.setAttribute('id', itemId);
+      item.setAttribute('onClick',`getFullPassage('${itemId}')`)
+
+      // appent item to list
+      list.appendChild(item);
+
+    }
+
+    return list;
   }
 
-  return list;
-}
+  document.getElementById('passage-list').appendChild(generateTitlesList(data));
 
-  generateTitlesList(data);
-  console.log(generateTitlesList(data));
-  console.log(document.getElementById('passageList').appendChild(generateTitlesList(data)));
+  // add click event to passage list item
+  var passageList = document.getElementById('passage-list');
+
+  function getFullPassage(id) {
+
+    var p = document.createElement('p');
+    var pBody = document.createTextNode("This is passage " + id);
+    p.appendChild(pBody);
+
+    console.log(p);
+
+    var item = document.getElementById(id);
+    item.appendChild(p);
+    item.setAttribute('onClick',`closePassage('${id}')`);
+  }
+
+  function closePassage(id) {
+    console.log(id);
+
+    var item = document.getElementById(id);
+    item.removeChild(item.childNodes[1]);
+    item.setAttribute('onClick',`getFullPassage('${id}')`);
+  }
+
 </script>
 
 </body>
