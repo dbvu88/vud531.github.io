@@ -24,13 +24,16 @@
       // create list item
       var item = document.createElement('li');
 
+      var pHeader = document.createElement('h4')
+      pHeader.appendChild(document.createTextNode(dataArray[i]));
+
       // set list content
-      item.appendChild(document.createTextNode(dataArray[i]));
+      item.appendChild(pHeader);
 
       let itemId = `passage${i}`
 
       item.setAttribute('id', itemId);
-      item.setAttribute('onClick',`getFullPassage('${itemId}')`)
+      item.childNodes[0].setAttribute('onClick',`getFullPassage('${itemId}')`)
 
       // appent item to list
       list.appendChild(item);
@@ -47,23 +50,19 @@
 
   function getFullPassage(id) {
 
-    var p = document.createElement('p');
-    var pBody = document.createTextNode("This is passage " + id);
-    p.appendChild(pBody);
-
-    console.log(p);
+    var pBody = document.createElement('p');
+    pBody.appendChild(document.createTextNode("This is passage " + id));
 
     var item = document.getElementById(id);
-    item.appendChild(p);
-    item.setAttribute('onClick',`closePassage('${id}')`);
+    item.childNodes[0].setAttribute('onClick',`closePassage('${id}')`);
+    item.appendChild(pBody);
+    
   }
 
   function closePassage(id) {
-    console.log(id);
-
     var item = document.getElementById(id);
     item.removeChild(item.childNodes[1]);
-    item.setAttribute('onClick',`getFullPassage('${id}')`);
+    item.childNodes[0].setAttribute('onClick',`getFullPassage('${id}')`);
   }
 
 </script>
