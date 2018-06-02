@@ -10,7 +10,7 @@ var data = post;
 function Header(){
     return `<div class="header">
                 
-                    <span onClick="onHomeClicked()" >Home</span>
+                    <span onClick="" >Home</span>
                     <span onClick="" >About</span>
                     <span onClick="" >Contact</span>
                 </span>
