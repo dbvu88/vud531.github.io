@@ -1,0 +1,46 @@
+.custom-flexbox(@direction, @main, @cross) {
+    display: flex;
+	flex-direction: @direction;
+    justify-content: @main;
+    align-items: @cross;
+}
+
+.custom-size(@width, @height) {
+    height: @height;
+    width: @width;
+}
+
+.custom-style(@bg-color, @a-color, @font-size) {
+    background-color: @bg-color;
+    color: @a-color;
+    font-size: @font-size;
+}
+.transition-property(@property) {
+    -webkit-transition-property: @property;
+    -moz-transition-property: @property;
+    -o-transition-property: @property;
+    -ms-transition-property: @property;
+    transition-property: @property;
+}
+.transition-duration(@duration) {
+    -webkit-transition-duration: @duration;
+    -moz-transition-duration: @duration;
+    -o-transition-duration: @duration;
+    -ms-transition-duration: @duration;
+    transition-duration: @duration;
+}
+
+.transition(@attributes) {
+    -webkit-transition: @attributes;
+    -moz-transition: @attributes;
+    -o-transition: @attributes;
+    -ms-transition: @attributes;
+    transition: @attributes;
+}
+
+.custom-border(@top, @bottom, @left, @right) {
+    border-top: @top;
+    border-bottom: @bottom;
+    border-left: @left;
+    border-right: @right; 
+}
