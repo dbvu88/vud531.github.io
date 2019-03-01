@@ -5,7 +5,7 @@ nav {
     // padding-left: 10%;
     margin-bottom: 50px;
     .custom-size(100%,100px);
-    .custom-flexbox(row, space-around, stretch);
+    .custom-flexbox(row, stretch, stretch);
 	position: fixed;
     border-bottom: solid @shadow 5px;
     // @media @mobile {
@@ -21,6 +21,8 @@ nav {
     }
 
     h1 {
+
+
         text-align: center;
         flex-grow: 2;
         .custom-flexbox(column, space-evenly, center);
@@ -52,6 +54,10 @@ nav {
     }
 
     a {
+        &#about {
+            margin-left: auto;
+        }
+
         flex-grow: 1;
         text-decoration: none;
         .custom-style(inherit, @anchor-color, @anchor-font);
