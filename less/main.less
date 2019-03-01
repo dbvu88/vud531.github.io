@@ -1,15 +1,64 @@
+.p-desktop() {
+    background-color: white;
+    border: @main-border;
+    // width: 550px;
+    line-height: 1.5;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    margin: 0 5%;
+}
+
+.section-deskstop() {
+    background-color: white;
+    border: @main-border;
+    padding: 10px 20px;
+    margin: 0 5%;
+}
+
+
 header {
+    @media @desktop {
+        padding-top: 150px;
+    }
+    @media @mobile {
+        padding-top: 0;
+    }
     section {
+        @media @desktop {
+            .section-deskstop();
+        }
         h1 {
             background-color: @moss;
             font-size: @header-font;
             border: @main-border;
         }
-    
         p {
-            background-color: white;
-            border: @main-border;
+
+            @media @desktop {
+                .p-desktop()
+            }
+
         }
     }
 
+}
+
+div.container {
+    section {
+        @media @desktop {
+            .section-deskstop();
+        }
+        h1 {
+            background-color: @moss;
+            font-size: @header-font;
+            border: @main-border;
+        }
+        p {
+
+            @media @desktop {
+                .p-desktop()
+            }
+
+        }
+    }
 }

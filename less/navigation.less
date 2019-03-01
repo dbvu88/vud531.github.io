@@ -12,6 +12,8 @@ nav {
     //     .custom-flexbox(column, center, center);
     // }
 	@media @mobile {
+        height: auto;
+        position: static;
         padding: 0px;
         margin-bottom: 10px; 
         .custom-size(100%,auto);
@@ -25,20 +27,26 @@ nav {
         .custom-style(@sunflower, @shadow, 50px);
         border: @main-border;
         border-top: none;
-        height: 130px;
-        max-width: 300px;
-        margin-left: 5%;
+
         span {
-            display: block;
-            font-size: 18px;
+            // display: block;
+            font-size: 0.5em;
         }
+
         @media @mobile {
-            margin-left: 0px;
+            margin: 0;
             border: none;
             border-bottom: @main-border;
             font-size: 28px;
-            max-width: 600px;
-            max-height: 80px;
+            max-width: 800px;
+            height: 80px;
+        }
+        @media @desktop {
+
+            .custom-size(300px,130px);
+            max-width: 300px;
+            margin:0 0 0 5%;
+
         }
 
     }
