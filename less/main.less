@@ -1,19 +1,5 @@
-.p-desktop() {
-    background-color: white;
-    border: @main-border;
-    // width: 550px;
-    line-height: 1.5;
-    padding: 10px 20px;
-    font-size: 1.5em;
-    margin: 0 5%;
-}
 
-.section-deskstop() {
-    background-color: white;
-    border: @main-border;
-    padding: 10px 20px;
-    margin: 0 5%;
-}
+
 
 
 header {
@@ -21,44 +7,122 @@ header {
         padding-top: 150px;
     }
     @media @mobile {
-        padding-top: 0;
+        .custom-border(@main-border, @main-border, 0, 0);
+        font-size: 20px;
     }
     section {
+        background-color: @moss;
+        text-align: center;
+        color: @shadow;
+
         @media @desktop {
-            .section-deskstop();
+            .section-desktop(@moss);
+            font-size: 30px;
+            border-bottom: none;
+            margin:0 5% 0 5%;
         }
-        h1 {
-            background-color: @moss;
-            font-size: @header-font;
-            border: @main-border;
-        }
-        p {
 
-            @media @desktop {
-                .p-desktop()
-            }
-
+        @media @mobile {
+            padding: 20px;
         }
+
     }
 
 }
 
 div.container {
+    @media @desktop {
+        .custom-flexbox(row, space-between, stretch);
+        margin: 0 5% 0 5%;
+    }
+
     section {
+        ul {
+            li {
+                @media @desktop {
+                    .custom-flexbox(row, space-between, center);
+                    flex-wrap: wrap;
+                    border-left: @main-border;
+                    margin-bottom: 50px 
+                }
+
+                        
+            }
+        }
         @media @desktop {
-            .section-deskstop();
+
+            .section-desktop(white);
         }
+
         h1 {
-            background-color: @moss;
-            font-size: @header-font;
-            border: @main-border;
+            @media @desktop {
+                font-size: @header-font;
+                width: fit-content;
+                padding: 30px 15px;
+            }
         }
+
+        h3 {
+            @media @desktop {
+                margin: 10px;
+            }
+        }
+
         p {
 
             @media @desktop {
-                .p-desktop()
+                margin: 10px;
             }
 
         }
+    }
+
+    aside {
+        background-color: @shadow;
+        h1 {
+            background-color: @stone;
+
+            @media @desktop {
+                border: 0;
+                padding: 5px 15px;
+                color: white;
+            }
+        }
+        section {
+            background-color: @shadow;
+            color: white;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            ul {
+                li {
+                    @media @desktop {
+                        .custom-flexbox(row, space-between, center);
+                    }
+
+                    margin: 0;
+                    a:hover {
+                        color: @moss;
+                        text-decoration: underline;
+                    }
+
+                    a:active {
+                        color: @moss;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    text-align: right;
+    @media @desktop {
+        margin: 0 5% 0 5%;
+
     }
 }
