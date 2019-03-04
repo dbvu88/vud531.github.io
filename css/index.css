@@ -389,8 +389,10 @@ div.container aside section a {
   color: white;
   text-decoration: underline;
 }
-div.container aside section p {
-  padding: 2% 0%;
+@media ( max-width: 800px ) {
+  div.container aside section p {
+    padding: 2% 0%;
+  }
 }
 div.container aside section ul li {
   margin: 0;
@@ -403,6 +405,9 @@ div.container aside section ul li {
     align-items: center;
   }
 }
+div.container aside section ul li h1 {
+  padding: 0;
+}
 div.container aside section ul li a:hover {
   color: #AEBD38;
   text-decoration: none;
@@ -413,10 +418,12 @@ div.container aside section ul li a:active {
 }
 @media ( max-width: 800px ) {
   div.container aside section ul li {
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 5px;
   }
 }
 @media ( max-width: 800px ) {

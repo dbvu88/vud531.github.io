@@ -151,13 +151,19 @@ div.container {
             }
 
             p {
-                padding: 2% 0%;
+                @media @mobile {
+                    padding: 2% 0%; 
+                }
             }
 
             ul {
                 li {
                     @media @desktop {
                         .custom-flexbox(row, space-between, center);
+                    }
+
+                    h1 {
+                        padding: 0;
                     }
 
                     margin: 0;
@@ -173,7 +179,10 @@ div.container {
 
                     @media @mobile {
                         // padding: 0% 5%;
+                        font-size: 20px;
                         .custom-flexbox(row, space-between, center);
+                        padding-bottom: 5px;
+
                     }
                 }
             }
