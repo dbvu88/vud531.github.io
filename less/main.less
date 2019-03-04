@@ -7,8 +7,10 @@ header {
         padding-top: 150px;
     }
     @media @mobile {
-        .custom-border(@main-border, @main-border, 0, 0);
-        font-size: 20px;
+        border-top: @main-border;
+        border-bottom: @main-border;
+
+        font-size: 18px;
     }
     section {
         background-color: @moss;
@@ -23,7 +25,8 @@ header {
         }
 
         @media @mobile {
-            padding: 20px;
+            padding: 10px;
+            line-height: 1.5;
         }
 
     }
@@ -31,6 +34,9 @@ header {
 }
 
 div.container {
+    @media @mobile {
+        .custom-flexbox(column-reverse, center, stretch,)
+    }
     @media @desktop {
         .custom-flexbox(row, space-between, stretch);
         margin: 0 5% 0 5%;
@@ -39,11 +45,17 @@ div.container {
     section {
         ul {
             li {
+                border-left: @main-border;
+
                 @media @desktop {
                     .custom-flexbox(row, space-between, center);
                     flex-wrap: wrap;
                     border-left: @main-border;
                     margin-bottom: 50px 
+                }
+
+                @media @mobile {
+                    margin: 20px 2%;
                 }
 
                         
@@ -54,17 +66,36 @@ div.container {
             .section-desktop(white);
         }
 
+        @media @mobile {
+
+            background-color: white;
+            border: 0;
+        }
+
         h1 {
             @media @desktop {
                 font-size: @header-font;
                 width: fit-content;
                 padding: 30px 15px;
             }
+
+            @media @mobile {
+                font-size: 20px;
+                text-align: center;
+                padding: 5% 0%;
+            }
+
+
         }
 
         h3 {
             @media @desktop {
                 margin: 10px;
+            }
+
+            @media @mobile {
+                font-size: 18px;
+                padding: 0% 2%;
             }
         }
 
@@ -74,27 +105,53 @@ div.container {
                 margin: 10px;
             }
 
+            @media @mobile {
+                font-size: 20px;
+                text-align: center;
+                padding: 5% 0%;
+            }
+
         }
     }
 
     aside {
         background-color: @shadow;
+        @media @mobile {
+            padding: 5% 5%;
+            .custom-flexbox(column-reverse, center, stretch,)
+        }
+
         h1 {
-            background-color: @stone;
 
             @media @desktop {
+                background-color: @stone;
+
                 border: 0;
                 padding: 5px 15px;
                 color: white;
             }
+
+            @media @mobile {
+                font-size: 24px;
+                padding: 5% 0%;
+            }
+
+
         }
+
         section {
             background-color: @shadow;
             color: white;
+            margin-bottom: 5%;
+            padding-bottom: 5%;
 
             a {
                 color: white;
-                text-decoration: none;
+                text-decoration: underline;
+            }
+
+            p {
+                padding: 2% 0%;
             }
 
             ul {
@@ -106,15 +163,24 @@ div.container {
                     margin: 0;
                     a:hover {
                         color: @moss;
-                        text-decoration: underline;
+                        text-decoration: none;
                     }
 
                     a:active {
-                        color: @moss;
+                        color: white;
                         text-decoration: none;
+                    }
+
+                    @media @mobile {
+                        // padding: 0% 5%;
+                        .custom-flexbox(row, space-between, center);
                     }
                 }
             }
+        }
+
+        @media @mobile {
+            text-align: center;
         }
     }
 }
