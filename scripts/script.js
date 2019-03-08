@@ -10,3 +10,51 @@ class Experience {
         this.description = attributes.description;
     }
 }
+
+class Project {
+    constructor(attributes){
+        this.title = attributes.title;
+        this.demo = attributes.demo;
+        this.git = attributes.git;
+    }
+}
+
+const content = {
+    navigation: {
+        label: {
+            'h1-name': 'Duc Vu',
+            'h2-occupation': 'Software Developer'
+        },
+        anchors: ['About', 'Project', 'Experience', 'Contact']
+    },
+    header: 'Welcome to my personal website, where I showcase my progress of becoming a better software developer.',
+    'section-project': [
+    ],
+    'section-experience': [
+        new Experience({
+            title: 'Entry Level .Net Engineer',
+            period: 'July, 2018 - Present',
+            employer: 'Fast Solution Inc.',
+            description: 'Working with senior engineers and business analyst to analyze and develope robust .Net applications'
+        }),
+        new Experience({
+            title: 'Software Engineer Internship',
+            period: 'January, 2018 - May, 2018',
+            employer: 'Fast Solution Inc.',
+            description: 'Gained real engineering experience by working with different departments within the company to analyze, create, and enhance different financial applications'
+        }),
+        new Experience({
+            title: 'iOS Front-End Engineer Internship',
+            period: 'September, 2018 - September, 2019',
+            employer: 'Lilitofu',
+            description: 'Worked with a team full of talented interns to create and deploy a new social media iOS mobile app from scratch'
+        }),],
+    aside: {
+        'section-skill': [],
+    },
+    footer: {
+        'section-contact': []
+    } 
+
+
+}

@@ -4,29 +4,19 @@
 
 header {
     @media @desktop {
-        padding-top: 150px;
     }
     @media @mobile {
-        border-top: @main-border;
-        border-bottom: @main-border;
 
-        font-size: 18px;
     }
     section {
-        background-color: @moss;
-        text-align: center;
-        color: @shadow;
+
 
         @media @desktop {
-            .section-desktop(@moss);
-            font-size: 30px;
-            border-bottom: none;
-            margin:0 5% 0 5%;
+
         }
 
         @media @mobile {
-            padding: 10px;
-            line-height: 1.5;
+
         }
 
     }
@@ -35,54 +25,38 @@ header {
 
 div.container {
     @media @mobile {
-        .custom-flexbox(column-reverse, center, stretch,)
     }
     @media @desktop {
-        .custom-flexbox(row, space-between, stretch);
-        margin: 0 5% 0 5%;
+
     }
 
     section {
         ul {
             li {
-                border-left: @main-border;
 
                 @media @desktop {
-                    .custom-flexbox(row, space-between, center);
-                    flex-wrap: wrap;
-                    border-left: @main-border;
-                    margin-bottom: 50px 
+
                 }
 
                 @media @mobile {
-                    margin: 0px 2% 20px;
                 }
-
-                        
+        
             }
         }
         @media @desktop {
-
-            .section-desktop(white);
         }
 
         @media @mobile {
 
-            background-color: white;
-            border: 0;
         }
 
         h1 {
             @media @desktop {
-                font-size: @header-font;
-                width: fit-content;
-                padding: 30px 15px;
+
             }
 
             @media @mobile {
-                font-size: 20px;
-                text-align: center;
-                padding: 5% 0%;
+
             }
 
 
@@ -90,113 +64,73 @@ div.container {
 
         h3 {
             @media @desktop {
-                margin: 10px;
             }
 
             @media @mobile {
-                font-size: 18px;
-                padding: 5px 2%;
+
             }
         }
 
         p {
 
             @media @desktop {
-                margin: 10px;
             }
 
             @media @mobile {
-                font-size: 20px;
-                padding: 5% 10px;
             }
 
         }
     }
 
     aside {
-        background-color: @shadow;
         @media @mobile {
-            padding: 5% 5%;
-            .custom-flexbox(column-reverse, center, stretch,)
         }
 
         h1 {
 
             @media @desktop {
-                background-color: @stone;
-
-                border: 0;
-                padding: 5px 15px;
-                color: white;
             }
 
             @media @mobile {
-                font-size: 24px;
-                padding: 5% 0%;
             }
 
 
         }
 
         section {
-            background-color: @shadow;
-            color: white;
-            margin-bottom: 5%;
-            padding-bottom: 5%;
 
-            a {
-                color: white;
-                text-decoration: underline;
-            }
+            a {}
 
             p {
                 @media @mobile {
-                    padding: 2% 0%; 
                 }
             }
 
             ul {
                 li {
                     @media @desktop {
-                        .custom-flexbox(row, space-between, center);
                     }
 
                     h1 {
-                        padding: 0;
                     }
 
                     margin: 0;
-                    a:hover {
-                        color: @moss;
-                        text-decoration: none;
-                    }
+                    a:hover {}
 
-                    a:active {
-                        color: white;
-                        text-decoration: none;
-                    }
+                    a:active {}
 
-                    @media @mobile {
-                        // padding: 0% 5%;
-                        font-size: 20px;
-                        .custom-flexbox(row, space-between, center);
-                        padding-bottom: 5px;
-
-                    }
+                    @media @mobile {}
                 }
             }
         }
 
         @media @mobile {
-            text-align: center;
         }
     }
 }
 
 footer {
-    text-align: right;
     @media @desktop {
-        margin: 0 5% 0 5%;
 
     }
 
