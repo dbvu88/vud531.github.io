@@ -126,6 +126,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+a {
+  text-decoration: none;
+}
 * {
   box-sizing: border-box;
 }
@@ -139,27 +142,45 @@ table {
 }
 @media ( max-width: 800px ) {
   nav {
-    padding: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
   }
 }
-nav h1 {
+nav label {
   text-align: center;
 }
 @media ( min-width: 800px ) {
-  nav h1 {
+  nav label {
+    padding: 5px;
     width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
   }
 }
 @media ( max-width: 800px ) {
-  nav h1 {
+  nav label {
+    padding: 1%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+}
+nav .menu a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@media ( max-width: 800px ) {
+  nav .menu a {
+    padding: 10px 0px;
+    border-bottom: black solid 1px;
   }
 }
 @media ( min-width: 800px ) {
@@ -181,6 +202,7 @@ nav h1 {
 }
 @media ( max-width: 800px ) {
   nav .menu-button {
+    background: red;
     height: 50px;
     width: 50px;
   }
