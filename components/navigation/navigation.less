@@ -1,12 +1,13 @@
 nav {
-    .flexbox(row, space-between, stretch);
 
     @media @desktop {
+        .flexbox(row, space-between, stretch);
 
     }
 
-	@media @mobile {
-        
+    @media @mobile {
+        padding: 1%;
+        .flexbox(column, center, stretch);
     }
 
     h1 {
@@ -17,7 +18,7 @@ nav {
         }
 
         @media @mobile {
-
+            .flexbox(row, space-between, center);
         }
 
 
@@ -45,10 +46,11 @@ nav {
         }
 
         @media @mobile {
+            .flexbox(column, center, center);
         }
     }
 
-    .dropdown-button {
+    .menu-button {
         
         @media @mobile {
             .size(50px,50px);
