@@ -1,0 +1,73 @@
+nav {
+    .flexbox(row, space-between, stretch);
+
+    @media @desktop {
+
+    }
+
+	@media @mobile {
+        
+    }
+
+    h1 {
+
+        text-align: center;
+        @media @desktop {
+            width: 20%;
+        }
+
+        @media @mobile {
+
+        }
+
+
+    }
+
+    a {
+        &#about {
+        }
+
+
+        &:hover {}
+
+        &:active {}
+
+        @media @mobile {
+
+        }
+    }
+
+    .menu {
+
+        @media @desktop {
+            width: 80%;
+            .flexbox(row, space-evenly, stretch);
+        }
+
+        @media @mobile {
+        }
+    }
+
+    .dropdown-button {
+        
+        @media @mobile {
+            .size(50px,50px);
+        }
+    }
+
+    .hidden-desktop {
+        
+        @media @desktop {
+            display: none;
+        }
+    }
+
+    .hidden-mobile {
+        
+        @media @mobile {
+            display: none;
+        }
+    }
+
+    
+}
