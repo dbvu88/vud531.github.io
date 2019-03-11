@@ -87,7 +87,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -131,6 +130,22 @@ a {
 }
 * {
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+html,
+body {
+  line-height: 2;
+  background-color: #e6efbd;
+}
+nav {
+  box-shadow: 0px 5px 1px -3px rgba(42, 49, 50, 0.28);
+  background: #e6efbd;
+  position: fixed;
+  width: 100%;
+}
+nav * {
+  font-family: "Raleway", sans-serif;
+  background: #e6efbd;
 }
 @media ( min-width: 800px ) {
   nav {
@@ -148,17 +163,24 @@ a {
     align-items: stretch;
   }
 }
+@media ( max-width: 800px ) {
+  nav.bordered-box {
+    border-bottom: black solid 1px;
+    transition-property: border;
+    transition-delay: 3s;
+  }
+}
 nav label {
   text-align: center;
 }
 @media ( min-width: 800px ) {
   nav label {
+    line-height: 1.5;
     padding: 5px;
-    width: 20%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: baseline;
   }
 }
 @media ( max-width: 800px ) {
@@ -170,22 +192,43 @@ nav label {
     align-items: center;
   }
 }
+nav label h1 {
+  padding: 5px;
+}
+nav label h1#name {
+  font-family: "Lobster", sans-serif;
+  color: #2A3132;
+  font-weight: normal;
+  font-size: 2em;
+}
+nav label h1#occupation {
+  font-family: "Kalam", sans-serif;
+  color: #5b514f;
+  font-weight: normal;
+  font-size: 1.1em;
+}
 nav .menu a {
+  font-family: "Kalam";
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: #2A3132;
+  font-weight: normal;
+  font-size: 1.1em;
   width: 100%;
+}
+nav .menu a:hover {
+  color: #557b84;
 }
 @media ( max-width: 800px ) {
   nav .menu a {
-    padding: 10px 0px;
-    border-bottom: black solid 1px;
+    padding: 1% 0px;
   }
 }
 @media ( min-width: 800px ) {
   nav .menu {
-    width: 80%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -198,6 +241,7 @@ nav .menu a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 5px 1px -3px rgba(53, 81, 163, 0.28);
   }
 }
 @media ( max-width: 800px ) {
