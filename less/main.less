@@ -1,141 +1,50 @@
-
-
-
-
-header {
-    @media @desktop {
-    }
-    @media @mobile {
-
-    }
-    section {
-
-
-        @media @desktop {
-
-        }
-
-        @media @mobile {
-
-        }
-
-    }
-
+.container {
+    font-size: 1.25em;
+    color: @night;
+    position: absolute;
+    top: 75px;
+    right: 75px;
+    left: 75px;
+    line-height: 1.5;
 }
 
-div.container {
-    @media @mobile {
-    }
-    @media @desktop {
-
-    }
-
-    section {
-        ul {
-            li {
-
-                @media @desktop {
-
-                }
-
-                @media @mobile {
-                }
-        
-            }
-        }
-        @media @desktop {
-        }
-
-        @media @mobile {
-
-        }
-
-        h1 {
-            @media @desktop {
-
-            }
-
-            @media @mobile {
-
-            }
+@title-height: auto;
 
 
-        }
-
-        h3 {
-            @media @desktop {
-            }
-
-            @media @mobile {
-
-            }
-        }
-
-        p {
-
-            @media @desktop {
-            }
-
-            @media @mobile {
-            }
-
-        }
-    }
-
-    aside {
-        @media @mobile {
-        }
-
-        h1 {
-
-            @media @desktop {
-            }
-
-            @media @mobile {
-            }
-
-
-        }
-
-        section {
-
-            a {}
-
-            p {
-                @media @mobile {
-                }
-            }
-
-            ul {
-                li {
-                    @media @desktop {
-                    }
-
-                    h1 {
-                    }
-
-                    margin: 0;
-                    a:hover {}
-
-                    a:active {}
-
-                    @media @mobile {}
-                }
-            }
-        }
-
-        @media @mobile {
-        }
-    }
+.sticky-header(@position) {
+    position: sticky;
+    top: @position;
+    background-color: @avocado;
+    color: @night;
+    font-size: 1.5em;
+}
+.header-style() {
+    // height: 50px;
+    .center-text();
 }
 
-footer {
-    @media @desktop {
-
-    }
-
-
+.body-style(@position) {
+    position: absolute;
+    top: @position;
+    
 }
 
 
+#about {
+    .sticky-header(50px);
+    .header-style();
 
+}
+
+#about-body {
+    // position: absolute;
+    // top: 50px;
+}
+
+#contact {
+    // .sticky-header(100px);
+    // .header-style();
+    position: sticky;
+    top: auto;
+
+}

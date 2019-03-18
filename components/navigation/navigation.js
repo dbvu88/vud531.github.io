@@ -14,7 +14,7 @@ class MenuButton {
     constructor(menuButton) {
         this.menuButton = menuButton;
         this.menu = document.querySelector(".menu");
-        this.menuButton.addEventListener("click", () => this.expandMenu());
+        // this.menuButton.addEventListener("click", () => this.expandMenu());
     }
 
     expandMenu() {

@@ -1,137 +1,124 @@
-
-@nav-bg: @avocado;
-@primary-color: @dark-teal;
-@secondary-color: @shadow;
-
-.font(@size, @weight, @color) {
-    color: @color;
-    font-weight: @weight; 
-    font-size: @size;
+.center-text() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+@avocado-transparent: #e6efbdef;
+@night-transparent: #5b514ff1;
+@night-shadow: #5b514f80;
 
-.fixed-bar() {
-    position: fixed;
-    width: 100%;
-}
 nav {
-    box-shadow: 0px 5px 1px -3px rgba(42, 49, 50, 0.28);
-    background: @nav-bg;
-    .fixed-bar();
+    position: fixed;
+    background-color: @avocado-transparent;
+    color: @night;
+    .font-alice();
+    left: 0px;
+    right: 0px;
+    z-index: 999;
+    height: 50px;  
+    box-shadow:0 0 5px 1px @night-shadow;
 
-    * {
-        font-family: "Raleway", sans-serif;
-
-        background: @nav-bg;
+    @media @tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+    h1 {
+        position: absolute;
+        z-index: 999;
+        font-size: 3em;
+        @media @desktop {
+            overflow: hidden;
+            width: 320px;
+            .center-text(); 
+        }
+
+        @media @tablet {
+            width: 30%;
+        }
+    
+        @media @mobile {
+            width: 100%;
+        }
+    }
+}
+.menu {
+
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 600px;
+    position: absolute;      
     @media @desktop {
-        .flexbox(row, space-between, stretch);
+        width: 50%;
+        top: 0px; 
+        right: 0px;
+        bottom: 0px;
+        font-size: 1.25em;
+    }
+    @media @tablet {
+        width: 70%;
+    }
+    @media @mobile {
+        width: 100%;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 1.15em;
+        transform: translateY(50px);
+        box-shadow:0 0 5px 1px @night-shadow;
+    }
+
+}
+
+.dashed-underline() {
+    border-bottom: dashed @night-transparent 2px;
+}
+.menu-item {
+    width: 100%;
+    .center-text();
+
+    a {
+        text-decoration: none;
+        color: @night;
+        .dashed-underline();
+
+        &:hover {
+            @media @desktop {
+                transform: scale(1.1);
+                transition: all 0.25s;
+            }
+        }
+        
+        &:active {
+            transform: translateY(5px);
+            transition: transform 0.15s;
+        }
+
+
+    }
+
+    &#contact-item {
+        background-color: @night-transparent;
+        margin-right: 0px;
+        a {
+            color: @avocado;
+            border-bottom: dashed @avocado-transparent 2px;
+        }
     }
 
     @media @mobile {
-        .flexbox(column, center, stretch);
-    }
-
-
-
-    &.bordered-box {
-        @media @mobile {
-            border-bottom: @primary-border;
-            transition-property: border;
-            transition-delay: 3s;
-
-        }
-    }
-
-    label {
-
-        text-align: center;
-
-
-        @media @desktop {
-            line-height: 1.5;
-            padding: 5px;
-            .flexbox(row, space-evenly, baseline);
-        }
-
-        @media @mobile {
-            padding: 1%;
-            .flexbox(row, space-between, center);
-
-        }
-
-        h1 {
-            padding: 5px;
-        }
-
-        h1#name {
-            font-family: "Lobster", sans-serif;
-            .font(2em, normal, @shadow);
-        }
-
-        h1#occupation {
-            font-family: "Kalam", sans-serif;
-            .font(1.1em, normal, @night);
-        }
-
 
     }
 
-    .menu {
-
-        a {
-            font-family: "Kalam";
-            .flexbox(row, center, center);
-            .font(1.1em, normal, @secondary-color);
-            width: 100%;
-            &:hover {
-                color: @primary-color;
-
-            }
-
-            @media @desktop {
-
-            }
-            
-            @media @mobile {
-                padding: 1% 0px;
-                // border-bottom: @primary-border;
-            }
-
-
-
-        }
-        @media @desktop {
-            width: 50%;
-            .flexbox(row, space-evenly, stretch);
-        }
+    @media @desktop {
         
-        @media @mobile {
-            .flexbox(column, center, center);
-            box-shadow: 0px 5px 1px -3px rgba(53, 81, 163, 0.28);
-        }
     }
 
-    .menu-button {
-
-        @media @mobile {
-            background: red;
-            .size(50px,50px);
-        }
-    }
-
-    .hidden-desktop {
-        
-        @media @desktop {
-            display: none;
-        }
-    }
-
-    .hidden-mobile {
-        
-        @media @mobile {
-            display: none;
-        }
-    }
-
-    
 }
+
+@night: #5b514f;
+@dark-teal: #557b84;
+@light-teal: #3bafa9;
+@pale-green: #a5d4a8;
+@avocado: #e6efbd;
+

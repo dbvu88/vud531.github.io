@@ -7,38 +7,63 @@
   <title>Duc Vu's Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
-  <link href="https://fonts.googleapis.com/css?family=Lobster|PT+Sans|Kalam|Pacifico|Raleway:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
   <script href="scripts/script.js"></script>
 </head>
 
 <body>
   <script defer="defer" src="./components/navigation/navigation.js"></script>
     <nav class="navigation">
-      <label>
-        <h1 id="name">Duc Vu</h1> 
-        <h1 id="occupation">Software Developer</h1>
-        <button class="menu-button hidden-desktop"></button>
-      </label>
-
+      <h1 >Duc Vu</h1> 
+      <!-- <h1 class="occupation">Software Developer</h1> -->
+      <!-- <button class="menu-button"></button> -->
 
             
-      <div class="menu hidden-mobile">
-        <a href="#about">About</a>
-        <a href="#Portfolios">Portfolios</a>
-        <a href="#Resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </div>
+      <ul class="menu">
+        <li class="menu-item"><a href="#about-body">About</a></li>
+        <li class="menu-item"><a href="#Portfolios">Projects</a></li>
+        <li class="menu-item"><a href="#Resume">Resume</a></li>
+        <li class="menu-item" id="contact-item"><a href="#contact-body">Contact</a></li>
+      </ul>
     </nav>
-  <header>
-    <section id="about">
-      <!-- <h1></h1> -->
+
+
+  <div class="container">
+    <header>
       <p>Welcome to my personal website, where I showcase my progress of becoming a better software developer</p>
-    </section>
-  </header>
-  <div class="container">  
+  
+    </header>
+    <div id="about">
+      <h1>About Me</h1>
+    </div>
+    <div id="about-body">
+      <p>Duc Vu is a Software Engineer with great curiosity. His learning mostly involves questioning and seeking the answer himself. His technical knowledge span across multiple software development platforms. He believes that problem-solving is not only about finding a solution but finding the best of the best solutions. After all, he still enjoys spending time with his family the most.</p>
+    </div>
+
+    <div id="Projects">
+      <h1>Projects</h1>
+    </div>
+    <div id="about-body">
+    </div>
+
+    <div id="contact">
+      <h1>Contact</h1>
+    </div>
+
+    <div id="contact-body">
+      <p>ducbavu531@gmail.com</p>
+      <p>Sioux City, Iowa</p>
+      <p>712-212-5567</p>
+      <a href="https://www.linkedin.com/in/ducbavu531/"><img src="assets/icon-by-dave-gandy/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://github.com/vud531"><img src="assets/icon-by-dave-gandy/github-logo-black-shape.png" alt="GitHub"></a>
+    </div>
+
+    <section>
+      
+    </section>  
     <aside>
 
-      <section id="Portfolios">
+      <section id="Portfolios" style="display: none;"> 
         <h1>Portfolios</h1>
         <ol>
           <li>
@@ -54,7 +79,7 @@
     </aside>
 
 
-    <section id="Resume">
+    <section id="Resume" style="display: none;">
       <h1>Work Resume</h1>
       <ul>
         <li>
@@ -81,15 +106,7 @@
     </section>
   </div>
   <footer>
-      <section id="contact">
-        <h1>Contact</h1>
-        <p>ducbavu531@gmail.com</p>
-        <p>Sioux City, Iowa</p>
-        <p>712-212-5567</p>
-        <a href="https://www.linkedin.com/in/ducbavu531/"><img src="assets/icon-by-dave-gandy/linkedin.png" alt="LinkedIn"></a>
-        <a href="https://github.com/vud531"><img src="assets/icon-by-dave-gandy/github-logo-black-shape.png" alt="GitHub"></a>
-      </section>
-    <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>  
+
   </footer>
   <!-- <nav id="bottom-nav">
     <a id="top" href="#navigation">Top</a>
