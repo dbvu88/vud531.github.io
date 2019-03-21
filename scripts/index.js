@@ -58,3 +58,14 @@ const content = {
 
 
 }
+console.log("hi");
+let spinner = document.querySelector("#spin-icon")
+console.log(spinner);
+
+let angle = 0;
+document.addEventListener('wheel', (e) => {
+    angle++;
+    console.log(e);
+    spinner.style.transform = `rotate(${angle}deg)`;
+})
+
