@@ -1,0 +1,135 @@
+.center-text() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@avocado-transparent: #e6efbdef;
+@night-transparent: #5b514ff1;
+@night-shadow: #5b514f80;
+
+.spin-icon {
+    position: absolute;
+
+}
+
+nav {
+    position: fixed;
+    background-color: @avocado-transparent;
+    color: @night;
+    .font-alice();
+    left: 0px;
+    right: 0px;
+    z-index: 999;
+    height: 50px;  
+    box-shadow:0 0 5px 1px @night-shadow;
+
+    @media @tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h1 {
+        position: absolute;
+        z-index: 999;
+        font-size: 3em;
+        @media @desktop {
+            overflow: hidden;
+            width: 320px;
+            .center-text(); 
+        }
+
+        @media @tablet {
+            width: 30%;
+        }
+    
+        @media @mobile {
+            width: 100%;
+        }
+    }
+}
+.menu {
+
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 600px;
+    position: absolute;      
+    @media @desktop {
+        width: 50%;
+        top: 0px; 
+        right: 0px;
+        bottom: 0px;
+        font-size: 1.25em;
+    }
+    @media @tablet {
+        width: 70%;
+    }
+    @media @mobile {
+        width: 100%;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 1.15em;
+        transform: translateY(50px);
+        box-shadow:0 0 5px 1px @night-shadow;
+    }
+
+    &:last-child {
+        height: 50px;
+        // .center-text();
+    }
+
+}
+
+.dashed-underline() {
+    border-bottom: dashed @night-transparent 2px;
+}
+.menu-item {
+    width: 100%;
+    height: 50px;
+    .center-text();
+
+    a {
+        text-decoration: none;
+        color: @night;
+        .dashed-underline();
+
+        &:hover {
+            @media @desktop {
+                transform: scale(1.1);
+                transition: all 0.25s;
+            }
+        }
+        
+        &:active {
+            transform: translateY(5px);
+            transition: transform 0.15s;
+        }
+
+
+    }
+
+    &#contact-item {
+        background-color: @night-transparent;
+        margin-right: 0px;
+        a {
+            color: @avocado;
+            border-bottom: dashed @avocado-transparent 2px;
+        }
+    }
+
+    @media @mobile {
+
+    }
+
+    @media @desktop {
+        
+    }
+
+}
+
+@night: #5b514f;
+@dark-teal: #557b84;
+@light-teal: #3bafa9;
+@pale-green: #a5d4a8;
+@avocado: #e6efbd;
+
