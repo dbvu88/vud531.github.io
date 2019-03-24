@@ -70,7 +70,9 @@ document.addEventListener('wheel', (e) => {
         angle--;
     }
     console.log(angle);
-    spinner.style.transform = `rotate(${angle*90}deg)`;
+    spinner.style.transform = `rotate(${angle*20}deg)`;
+    spinner.style.transition = `transform 0.5s`;
+
 })
 
 
