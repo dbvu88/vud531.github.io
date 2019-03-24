@@ -232,7 +232,6 @@ nav span {
 }
 .menu-item a {
   text-decoration: none;
-  border-bottom: dashed #5b514ff1 2px;
 }
 @media ( max-width: 4000px ), ( max-width: 1000px ) {
   .menu-item a {
@@ -262,7 +261,6 @@ nav span {
 @media ( max-width: 4000px ), ( max-width: 1000px ) {
   .menu-item#contact-item a {
     color: #e6efbd;
-    border-bottom: dashed #e6efbdef 2px;
   }
 }
 @media ( max-width: 680px ) {
