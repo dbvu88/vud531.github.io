@@ -78,16 +78,19 @@ let y_position = document.defaultView.pageYOffset;
 //     spinner.style.transform = `rotate(${angle*10}deg)`;
 //     // spinner.style.transform = `rotate(10deg)`;
 //     spinner.style.transition = `transform 0.5s`;
-    
-
 // })
 
 document.addEventListener('scroll', (e) => {
-    angle = (e.pageY - y_position);
-    spinner.style.transform = `rotate(${angle/10}deg)`;
-    // spinner.style.transition = `transform 0.1s`;
-    y_position = angle;
-
+    if (e.pageY > y_position) {
+        angle++;
+    } else {
+        angle--;
+    }
+    console.log(angle)
+    y_position = e.pageY;
+    spinner.style.transform = `rotate(${angle*3}deg)`;
+    spinner.style.transition = `transform 0.1s`;
+   
 })
 
 
