@@ -63,14 +63,16 @@ let spinner = document.querySelector(".spinner");
 console.log(spinner);
 
 let angle = 0;
-window.addEventListener('wheel', (e) => {
+document.addEventListener('wheel', (e) => {
     if (e.deltaY > 0) {
         angle++;
     } else {
         angle--;
     }
-    console.log(e);
-    spinner.style.transform = `rotate(${angle}deg)`;
+    console.log(angle);
+    spinner.style.transform = `rotate(${angle*20}deg)`;
+    spinner.style.transition = `transform 0.5s`;
+
 })
 
 
