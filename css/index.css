@@ -235,7 +235,7 @@ nav span {
 }
 @media ( max-width: 4000px ), ( max-width: 1000px ) {
   .menu-item a {
-    color: #7a1400;
+    color: #5b514f;
   }
 }
 @media ( max-width: 680px ) {
@@ -274,13 +274,13 @@ nav span {
   }
 }
 .spinner {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 .spinner svg {
-  width: 40px;
-  height: 40px;
-  fill: #7a1400;
+  width: 50px;
+  height: 50px;
+  fill: #5b514f;
 }
 header {
   text-align: center;
