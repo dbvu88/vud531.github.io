@@ -61,14 +61,16 @@ nav {
     justify-content: space-evenly;
     position: absolute;      
     @media @desktop {
-        width: 50%;
+        width: 35%;
         top: 0px; 
         right: 0px;
         bottom: 0px;
-        font-size: 1.25em;
+        font-size: 1.5em;
     }
     @media @tablet {
         width: 70%;
+        font-size: 1.25em;
+
     }
     @media @mobile {
         width: 100%;
@@ -101,7 +103,7 @@ nav {
         // .dashed-underline();
         @media @desktop, @tablet {
             color: @night;
-
+            font-size: 1.2em;
         }
         @media @mobile {
             color: @avocado;
@@ -109,7 +111,10 @@ nav {
         }
         &:hover {
             @media @desktop {
-                transform: scale(1.1);
+                // font-weight: bold;
+                // transform: scale(1.2);
+                // font-weight: bold;
+                .dashed-underline();
                 transition: all 0.25s;
             }
         }
@@ -126,6 +131,10 @@ nav {
         background-color: @night-transparent;
         margin-right: 0px;
         a {
+            
+            &:hover {
+                border-bottom: dashed @avocado-transparent 2px;
+            }
             @media @desktop, @tablet {
                 color: @avocado;
                 // border-bottom: dashed @avocado-transparent 2px;

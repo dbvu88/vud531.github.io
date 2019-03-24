@@ -88,7 +88,7 @@ document.addEventListener('scroll', (e) => {
     }
     console.log(document.defaultView.pageYOffset )
     y_previous = document.defaultView.pageYOffset;
-    spinner.style.transform = `rotate(${angle*3}deg)`;
+    spinner.style.transform = `rotate(${angle*2}deg)`;
     spinner.style.transition = `transform 0.1s`;
    
 })

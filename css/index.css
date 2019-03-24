@@ -196,16 +196,17 @@ nav span {
 }
 @media ( max-width: 4000px ) {
   .menu {
-    width: 50%;
+    width: 35%;
     top: 0px;
     right: 0px;
     bottom: 0px;
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
 }
 @media ( max-width: 1000px ) {
   .menu {
     width: 70%;
+    font-size: 1.25em;
   }
 }
 @media ( max-width: 680px ) {
@@ -236,6 +237,7 @@ nav span {
 @media ( max-width: 4000px ), ( max-width: 1000px ) {
   .menu-item a {
     color: #5b514f;
+    font-size: 1.2em;
   }
 }
 @media ( max-width: 680px ) {
@@ -246,7 +248,7 @@ nav span {
 }
 @media ( max-width: 4000px ) {
   .menu-item a:hover {
-    transform: scale(1.1);
+    border-bottom: dashed #5b514ff1 2px;
     transition: all 0.25s;
   }
 }
@@ -257,6 +259,9 @@ nav span {
 .menu-item#contact-item {
   background-color: #5b514ff1;
   margin-right: 0px;
+}
+.menu-item#contact-item a:hover {
+  border-bottom: dashed #e6efbdef 2px;
 }
 @media ( max-width: 4000px ), ( max-width: 1000px ) {
   .menu-item#contact-item a {
@@ -289,18 +294,17 @@ header {
   font-size: 1.25em;
   color: #5b514f;
   position: absolute;
+  top: 175px;
   line-height: 1.5;
 }
 @media ( max-width: 4000px ) {
   .container {
-    top: 75px;
     right: 75px;
     left: 75px;
   }
 }
 @media ( max-width: 680px ), ( max-width: 1000px ) {
   .container {
-    top: 0px;
     right: 0px;
     left: 0px;
   }
@@ -346,4 +350,7 @@ header {
   justify-content: center;
   align-items: center;
   border: solid #7a1400 5px;
+}
+#about-body:target {
+  padding-top: 150px;
 }

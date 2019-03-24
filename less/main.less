@@ -8,14 +8,17 @@ header {
     color: @night;
     position: absolute;
 
+    // below fixed positioned nav
+    top: 175px;
+
     @media @desktop  { 
-        top: 75px;
+        // top: 75px;
         right: 75px;
         left: 75px;
     }
 
     @media @mobile, @tablet { 
-        top: 0px;
+        // top: 0px;
         right: 0px;
         left: 0px;
     }
@@ -74,4 +77,8 @@ header {
     // position: sticky;
     // top: auto;
 
+}
+
+#about-body:target {
+    padding-top: 150px;
 }
