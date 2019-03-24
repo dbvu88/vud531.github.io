@@ -6,6 +6,7 @@
 @avocado-transparent: #e6efbdef;
 @night-transparent: #5b514ff1;
 @night-shadow: #5b514f80;
+@brown-transparent: #7a1400ea;
 
 .spin-icon {
     position: absolute;
@@ -28,7 +29,7 @@ nav {
         justify-content: space-between;
         align-items: center;
     }
-    h1 {
+    span {
         position: absolute;
         z-index: 999;
         font-size: 3em;
@@ -36,14 +37,21 @@ nav {
             overflow: hidden;
             width: 320px;
             .center-text(); 
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
         }
 
         @media @tablet {
             width: 30%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
         }
     
         @media @mobile {
             width: 100%;
+            .center-text();
         }
     }
 }
@@ -51,7 +59,6 @@ nav {
 
     display: flex;
     justify-content: space-evenly;
-    max-width: 600px;
     position: absolute;      
     @media @desktop {
         width: 50%;
@@ -71,6 +78,7 @@ nav {
         font-size: 1.15em;
         transform: translateY(50px);
         box-shadow:0 0 5px 1px @night-shadow;
+        background-color: @brown-transparent;
     }
 
     &:last-child {
@@ -87,12 +95,17 @@ nav {
     width: 100%;
     height: 50px;
     .center-text();
-
     a {
         text-decoration: none;
-        color: @night;
         .dashed-underline();
+        @media @desktop, @tablet {
+            color: @brown;
 
+        }
+        @media @mobile {
+            color: @avocado;
+            border: none;
+        }
         &:hover {
             @media @desktop {
                 transform: scale(1.1);
@@ -112,19 +125,35 @@ nav {
         background-color: @night-transparent;
         margin-right: 0px;
         a {
-            color: @avocado;
-            border-bottom: dashed @avocado-transparent 2px;
+            @media @desktop, @tablet {
+                color: @avocado;
+                border-bottom: dashed @avocado-transparent 2px;
+            }
+
+            @media @mobile {
+                border: none;
+            }
         }
     }
 
     @media @mobile {
-
+        border-left: dashed @avocado-transparent 2px;
     }
 
     @media @desktop {
         
     }
 
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    svg {
+        width: 40px;
+        height: 40px;
+        fill: @brown;
+    }
 }
 
 @night: #5b514f;
