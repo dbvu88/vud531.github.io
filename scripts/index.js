@@ -63,7 +63,7 @@ let spinner = document.querySelector(".spinner");
 console.log(spinner);
 
 let angle = 0;
-document.addEventListener('wheel', (e) => {
+window.addEventListener('wheel', (e) => {
     if (e.deltaY > 0) {
         angle++;
     } else {
