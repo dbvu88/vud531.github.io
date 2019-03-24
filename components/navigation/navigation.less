@@ -1,75 +1,164 @@
+.center-text() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@avocado-transparent: #e6efbdef;
+@night-transparent: #5b514ff1;
+@night-shadow: #5b514f80;
+@brown-transparent: #7a1400ea;
+
+.spin-icon {
+    position: absolute;
+
+}
+
 nav {
+    position: fixed;
+    background-color: @avocado-transparent;
+    color: @night;
+    .font-alice();
+    left: 0px;
+    right: 0px;
+    z-index: 999;
+    height: 50px;  
+    box-shadow:0 0 5px 1px @night-shadow;
 
+    @media @tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    span {
+        position: absolute;
+        z-index: 999;
+        font-size: 3em;
+        @media @desktop {
+            overflow: hidden;
+            width: 320px;
+            .center-text(); 
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+        }
+
+        @media @tablet {
+            width: 30%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    
+        @media @mobile {
+            width: 100%;
+            .center-text();
+        }
+    }
+}
+.menu {
+
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;      
     @media @desktop {
-        .flexbox(row, space-between, stretch);
+        width: 50%;
+        top: 0px; 
+        right: 0px;
+        bottom: 0px;
+        font-size: 1.25em;
+    }
+    @media @tablet {
+        width: 70%;
+    }
+    @media @mobile {
+        width: 100%;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 1.15em;
+        transform: translateY(50px);
+        box-shadow:0 0 5px 1px @night-shadow;
+        background-color: @brown-transparent;
+    }
 
+    &:last-child {
+        height: 50px;
+        // .center-text();
+    }
+
+}
+
+.dashed-underline() {
+    border-bottom: dashed @night-transparent 2px;
+}
+.menu-item {
+    width: 100%;
+    height: 50px;
+    .center-text();
+    a {
+        text-decoration: none;
+        .dashed-underline();
+        @media @desktop, @tablet {
+            color: @brown;
+
+        }
+        @media @mobile {
+            color: @avocado;
+            border: none;
+        }
+        &:hover {
+            @media @desktop {
+                transform: scale(1.1);
+                transition: all 0.25s;
+            }
+        }
+        
+        &:active {
+            transform: translateY(5px);
+            transition: transform 0.15s;
+        }
+
+
+    }
+
+    &#contact-item {
+        background-color: @night-transparent;
+        margin-right: 0px;
+        a {
+            @media @desktop, @tablet {
+                color: @avocado;
+                border-bottom: dashed @avocado-transparent 2px;
+            }
+
+            @media @mobile {
+                border: none;
+            }
+        }
     }
 
     @media @mobile {
-        padding: 1%;
-        .flexbox(column, center, stretch);
+        border-left: dashed @avocado-transparent 2px;
     }
 
-    h1 {
-
-        text-align: center;
-        @media @desktop {
-            width: 20%;
-        }
-
-        @media @mobile {
-            .flexbox(row, space-between, center);
-        }
-
-
-    }
-
-    a {
-        &#about {
-        }
-
-
-        &:hover {}
-
-        &:active {}
-
-        @media @mobile {
-
-        }
-    }
-
-    .menu {
-
-        @media @desktop {
-            width: 80%;
-            .flexbox(row, space-evenly, stretch);
-        }
-
-        @media @mobile {
-            .flexbox(column, center, center);
-        }
-    }
-
-    .menu-button {
+    @media @desktop {
         
-        @media @mobile {
-            .size(50px,50px);
-        }
     }
 
-    .hidden-desktop {
-        
-        @media @desktop {
-            display: none;
-        }
-    }
-
-    .hidden-mobile {
-        
-        @media @mobile {
-            display: none;
-        }
-    }
-
-    
 }
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    svg {
+        width: 40px;
+        height: 40px;
+        fill: @brown;
+    }
+}
+
+@night: #5b514f;
+@dark-teal: #557b84;
+@light-teal: #3bafa9;
+@pale-green: #a5d4a8;
+@avocado: #e6efbd;
+

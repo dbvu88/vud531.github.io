@@ -1,141 +1,77 @@
-
-
-
-
 header {
-    @media @desktop {
-    }
-    @media @mobile {
-
-    }
-    section {
-
-
-        @media @desktop {
-
-        }
-
-        @media @mobile {
-
-        }
-
-    }
-
+    text-align: center;
 }
 
-div.container {
-    @media @mobile {
-    }
-    @media @desktop {
+.container {
 
-    }
+    font-size: 1.25em;
+    color: @night;
+    position: absolute;
 
-    section {
-        ul {
-            li {
-
-                @media @desktop {
-
-                }
-
-                @media @mobile {
-                }
-        
-            }
-        }
-        @media @desktop {
-        }
-
-        @media @mobile {
-
-        }
-
-        h1 {
-            @media @desktop {
-
-            }
-
-            @media @mobile {
-
-            }
-
-
-        }
-
-        h3 {
-            @media @desktop {
-            }
-
-            @media @mobile {
-
-            }
-        }
-
-        p {
-
-            @media @desktop {
-            }
-
-            @media @mobile {
-            }
-
-        }
+    @media @desktop  { 
+        top: 75px;
+        right: 75px;
+        left: 75px;
     }
 
-    aside {
-        @media @mobile {
-        }
-
-        h1 {
-
-            @media @desktop {
-            }
-
-            @media @mobile {
-            }
-
-
-        }
-
-        section {
-
-            a {}
-
-            p {
-                @media @mobile {
-                }
-            }
-
-            ul {
-                li {
-                    @media @desktop {
-                    }
-
-                    h1 {
-                    }
-
-                    margin: 0;
-                    a:hover {}
-
-                    a:active {}
-
-                    @media @mobile {}
-                }
-            }
-        }
-
-        @media @mobile {
-        }
+    @media @mobile, @tablet { 
+        top: 0px;
+        right: 0px;
+        left: 0px;
     }
+
+    line-height: 1.5;
 }
 
-footer {
-    @media @desktop {
-
-    }
+@title-height: 50px;
 
 
+.sticky-header(@position, @height) {
+    position: sticky;
+    top: @position;
+    background-color: @avocado-transparent;
+    color: @night;
+    font-size: 1.5em;
+    height: @height;
+    margin: auto;
+    .center-text();
+    border: solid @brown 5px;
+}
+// .header-style(@heigh) {
+//     .center-text();
+// }
+
+.body-style(@position) {
+    position: absolute;
+    top: @position;
 }
 
 
+#about-head {
+    .sticky-header(@title-height, @title-height);
+}
 
+#about-body {
+
+    margin: auto;
+    p {
+        text-align: center;
+    }
+
+    @media @desktop {
+        width: 50%;
+
+    }
+
+    @media @mobile, @tablet {
+        width: 90%;
+    }
+}
+
+#contact-head {
+    .sticky-header(2*@title-height, @title-height);
+    // .header-style();
+    // position: sticky;
+    // top: auto;
+
+}

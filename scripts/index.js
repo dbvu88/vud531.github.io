@@ -58,3 +58,19 @@ const content = {
 
 
 }
+console.log("hi");
+let spinner = document.querySelector(".spinner");
+console.log(spinner);
+
+let angle = 0;
+document.addEventListener('wheel', (e) => {
+    if (e.deltaY > 0) {
+        angle++;
+    } else {
+        angle--;
+    }
+    console.log(angle);
+    spinner.style.transform = `rotate(${angle*90}deg)`;
+})
+
+
