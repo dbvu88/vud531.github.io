@@ -63,7 +63,7 @@ let spinner = document.querySelector(".spinner");
 console.log(spinner);
 
 let angle = 0;
-let y_position = document.defaultView.pageYOffset;
+let y_previous = document.defaultView.pageYOffset;
 
 //wheel event does not work on phone, scroll does
 // document.addEventListener('wheel', (e) => {
@@ -81,13 +81,13 @@ let y_position = document.defaultView.pageYOffset;
 // })
 
 document.addEventListener('scroll', (e) => {
-    if (e.pageY > y_position) {
+    if (document.defaultView.pageYOffset > y_previous) {
         angle++;
     } else {
         angle--;
     }
-    console.log(angle)
-    y_position = e.pageY;
+    console.log(document.defaultView.pageYOffset )
+    y_previous = document.defaultView.pageYOffset;
     spinner.style.transform = `rotate(${angle*3}deg)`;
     spinner.style.transition = `transform 0.1s`;
    
